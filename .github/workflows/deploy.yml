@@ -1,0 +1,32 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Checkout code
+        uses: actions/checkout@v3
+
+      - name:  Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name:  Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name:  Deploy to Vercel
+        run: |
+          npm install -g vercel
+          ORG_ID=$(jq -r .orgId .vercel/project.json)
+          PROJECT_ID=$(jq -r .projectId .vercel/project.json)
+          vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm --org $ORG_ID --project $PROJECT_ID
