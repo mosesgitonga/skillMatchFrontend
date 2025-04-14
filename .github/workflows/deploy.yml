@@ -27,5 +27,4 @@ jobs:
         run: |
           npm install -g vercel
           vercel --prod --confirm \
-            --org team_7zWoGwKtcYzHFUU542wE5A89 \
             --project prj_BMkAxkzAhehOmr3quatJofxN6Njx
