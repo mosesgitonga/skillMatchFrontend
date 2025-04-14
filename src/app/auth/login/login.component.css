@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Main container styling */
+.login-container {
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ebe9e9e8;
+
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  /* Input styling */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Error states - for Angular form validation */
+  input.ng-touched.ng-invalid {
+    border-color: #e74c3c;
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3a7bc8;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Registration link styling */
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #3a7bc8;
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    .login-container {
+      margin: 20px 15px;
+      padding: 20px;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px 12px;
+    }
+    
+    button[type="submit"] {
+      padding: 12px;
+    }
+  }
+  
+  /* Optional error message styling */
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Animation for button */
+  button[type="submit"]:not(:disabled) {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button[type="submit"]:not(:disabled):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  button[type="submit"]:not(:disabled):focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }

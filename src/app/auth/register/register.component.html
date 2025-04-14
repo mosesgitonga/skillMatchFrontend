@@ -1,0 +1,47 @@
+<body>
+  <div class="login-container">
+    <h2>Register</h2>
+    <form (ngSubmit)="onSubmit()">
+      <!-- Role Switch -->
+      <div class="role-switch">
+        <button type="button" [class.active]="role === 'jobseeker'" (click)="switchRole('jobseeker')">Jobseeker</button>
+        <button type="button" [class.active]="role === 'employer'" (click)="switchRole('employer')">Employer</button>
+      </div>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" [(ngModel)]="fullName" name="fullName" required class="form-control"
+          placeholder="Enter your name" />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" [(ngModel)]="email" name="email" required email class="form-control"
+          placeholder="Enter your email" />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" required minlength="6"
+          class="form-control" placeholder="Enter your password" />
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required
+          class="form-control" placeholder="Confirm your password" />
+      </div>
+
+      <button type="submit" [disabled]="!fullName || !email || !password || password !== confirmPassword"
+        class="submit-btn">Register</button>
+
+      <p>Already have an account? <a routerLink="/login">Login</a></p>
+
+    </form>
+  </div>
+
+</body>

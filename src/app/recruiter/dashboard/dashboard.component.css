@@ -1,0 +1,173 @@
+/* Recruiter Dashboard */
+.recruiter-dashboard-container {
+    padding: 20px;
+    background-color: #f9f9fb;
+    color: #1c1c1e;
+  }
+  
+  /* Header Section */
+  .recruiter-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1c1c1e;
+  }
+  
+  .welcome-section p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .action-button {
+    background-color: #0071f2;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .action-button:hover {
+    background-color: #005fd1;
+  }
+  
+  /* Analytics Summary Section */
+  .job-postings-analytics {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .metric-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+  }
+  
+  .metric-card .metric-value {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  
+  .metric-card .metric-label {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Candidate Management Section */
+  .candidate-management {
+    margin-top: 40px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .candidates-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .candidate-card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .candidate-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .candidate-info .job-title {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .candidate-info .location {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .candidate-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .shortlist-button,
+  .reject-button {
+    background-color: #0071f2;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shortlist-button:hover,
+  .reject-button:hover {
+    background-color: #005fd1;
+  }
+  
+  /* Footer CTA */
+  .action-footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .primary-button {
+    background-color: #1c1c1e;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: #0071f2;
+  }
+  
+  .button-text {
+    font-size: 14px;
+  }
+  
+  .arrow-icon {
+    /* background: url('icon-arrow.svg') no-repeat center; */
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+  

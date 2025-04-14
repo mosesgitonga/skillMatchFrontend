@@ -1,0 +1,74 @@
+<div class="recruiter-dashboard-container">
+    <!-- Header Section -->
+    <header class="recruiter-dashboard-header">
+      <div class="welcome-section">
+        <h1>Welcome back, <span class="user-name">{{ recruiter.name }}</span></h1>
+        <p class="location"><i class="location-icon"></i> {{ recruiter.location }}</p>
+      </div>
+      <button class="action-button post-job-button">
+        <span class="button-icon plus-icon"></span>
+        Post a New Job
+      </button>
+    </header>
+  
+    <!-- Job Postings Analytics -->
+    <div class="job-postings-analytics">
+      <div class="metric-card active-postings">
+        <div class="metric-value">{{ stats.activePostings }}</div>
+        <div class="metric-label">Active Postings</div>
+      </div>
+      
+      <div class="metric-card applications">
+        <div class="metric-value">{{ stats.applications }}</div>
+        <div class="metric-label">Applications</div>
+      </div>
+      
+      <div class="metric-card shortlisted">
+        <div class="metric-value">{{ stats.shortlisted }}</div>
+        <div class="metric-label">Shortlisted</div>
+      </div>
+    </div>
+  
+    <!-- Candidate Management Section -->
+    <div class="candidate-management">
+      <div class="section-header">
+        <h2>Candidate Pool</h2>
+        <button class="view-all-link">View all candidates</button>
+      </div>
+      <div class="candidates-container">
+        <!-- Sample Candidate Card -->
+        <div class="candidate-card">
+          <div class="candidate-info">
+            <h3>John Doe</h3>
+            <p class="job-title">Software Engineer</p>
+            <p class="location">New York</p>
+          </div>
+          <div class="candidate-actions">
+            <button class="shortlist-button">Shortlist</button>
+            <button class="reject-button">Reject</button>
+          </div>
+        </div>
+        
+        <div class="candidate-card">
+          <div class="candidate-info">
+            <h3>Jane Smith</h3>
+            <p class="job-title">Frontend Developer</p>
+            <p class="location">San Francisco</p>
+          </div>
+          <div class="candidate-actions">
+            <button class="shortlist-button">Shortlist</button>
+            <button class="reject-button">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Action Footer -->
+    <div class="action-footer">
+      <button class="primary-button" routerLink="/manage-jobs">
+        <span class="button-text">Manage Job Postings</span>
+        <span class="button-icon arrow-icon"></span>
+      </button>
+    </div>
+  </div>
+  

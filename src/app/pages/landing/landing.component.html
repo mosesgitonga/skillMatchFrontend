@@ -1,0 +1,93 @@
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to SkillMatch AI</h1>
+            <p class="hero-subtitle">Redefining recruitment by focusing on what truly matters—skills that drive success.</p>
+            <div class="cta-buttons">
+                <a href="/register" class="btn btn-primary">Get Started</a>
+                <a href="/login" class="btn btn-outline">Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Why Choose SkillMatch AI?</h2>
+        <p class="section-subtitle">Experience a revolutionary approach to talent acquisition and career growth.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>AI Skill Matching</h3>
+                <p>Move beyond job titles. Our advanced AI identifies and matches candidates based on proven abilities, ensuring perfect alignment with opportunities.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Career Guidance</h3>
+                <p>Unlock your potential with personalized insights. See where your skills can take you and plan your next career move with confidence.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-Time Recruiter Chat</h3>
+                <p>Engage with recruiters effortlessly using natural language processing, making connections faster and more meaningful.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Resume Parsing</h3>
+                <p>Upload your resume and let our AI extract your skills, experience, and achievements—streamlining the process with precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">At SkillMatch AI, we’re transforming the recruitment landscape by empowering individuals and organizations to focus on skills that matter. Our cutting-edge technology bridges the gap between talent and opportunity like never before.</p>
+            <a href="/learn-more" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"SkillMatch AI found me a role that perfectly matched my expertise—something I’d never have discovered otherwise."</p>
+                <h4>- Sarah K., Data Analyst</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"The real-time chat with recruiters saved me weeks of back-and-forth. It’s a game-changer."</p>
+                <h4>- James R., Software Engineer</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"I love how the AI broke down my resume and showed me career paths I hadn’t considered."</p>
+                <h4>- Priya M., Marketing Specialist</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 SkillMatch AI. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation trigger for scroll effects
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.feature-card, .testimonial-card');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    el.classList.add('animate');
+                }
+            });
+        });
+    </script>
+</body>

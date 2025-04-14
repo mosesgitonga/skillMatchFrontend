@@ -1,0 +1,51 @@
+<div class="admin-dashboard">
+    <header class="admin-header">
+      <h1>Welcome, Admin</h1>
+      <p class="location">{{ admin.location }}</p>
+    </header>
+  
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Users</h3>
+        <p>{{ stats.totalUsers }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Recruiters</h3>
+        <p>{{ stats.recruiters }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>Job Seekers</h3>
+        <p>{{ stats.jobSeekers }}</p>
+      </div>
+    </section>
+  
+    <section class="user-management">
+      <div class="panel-header">
+        <h2>Manage Users</h2>
+      </div>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{ user.name }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.status }}</td>
+            <td>
+              <button (click)="toggleStatus(i)">
+                {{ user.status === 'active' ? 'Deactivate' : 'Activate' }}
+              </button>
+              <button (click)="promoteToAdmin(i)" *ngIf="user.role !== 'admin'">Promote</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  

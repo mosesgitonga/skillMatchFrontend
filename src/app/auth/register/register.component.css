@@ -1,0 +1,188 @@
+body {
+  background-color: #3a7bc8;
+  width: 100vw;
+  height: 100vh;
+}
+/* Main container styling */
+.login-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ebe9e9e8;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Role switch styling */
+  .role-switch {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+  }
+  
+  .role-switch button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .role-switch button.active {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .form-control {
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3a7bc8;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #3a7bc8;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    .login-container {
+      margin: 20px 15px;
+      padding: 20px;
+    }
+    
+    .form-control {
+      padding: 10px 12px;
+    }
+    
+    .submit-btn {
+      padding: 12px;
+    }
+  }
+  
+  /* Error states - can be used with Angular validation */
+  .form-control.ng-touched.ng-invalid {
+    border-color: #e74c3c;
+  }
+  
+  /* Success states */
+  .form-control.ng-valid {
+    border-color: #2ecc71;
+  }
+  
+  /* Optional error message styling */
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Animation for role switching */
+  .role-switch button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .role-switch button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .role-switch button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }

@@ -1,0 +1,122 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <div class="welcome-section">
+      <h1>Welcome back, <span class="user-name">{{ user.name }}</span></h1>
+      <p class="location"><i class="location-icon"></i> {{ user.location }}</p>
+    </div>
+    <button class="action-button resume-button">
+      <span class="button-icon document-icon"></span>
+      Generate Resume
+    </button>
+  </header>
+
+  <!-- Analytics Summary Cards -->
+  <div class="analytics-summary">
+    <div class="metric-card applications">
+      <div class="metric-value">{{ stats.applied }}</div>
+      <div class="metric-label">Applications</div>
+      <div class="metric-trend">
+        <span class="trend-icon up"></span>
+        <span class="trend-value">12% from last month</span>
+      </div>
+    </div>
+    
+    <div class="metric-card interviews">
+      <div class="metric-value">{{ stats.interviews }}</div>
+      <div class="metric-label">Interviews</div>
+      <div class="metric-trend">
+        <span class="trend-icon up"></span>
+        <span class="trend-value">5% from last month</span>
+      </div>
+    </div>
+    
+    <div class="metric-card shortlisted">
+      <div class="metric-value">{{ stats.shortlisted }}</div>
+      <div class="metric-label">Shortlisted</div>
+      <div class="metric-trend">
+        <span class="trend-icon up"></span>
+        <span class="trend-value">8% from last month</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <section class="content-panel skills-section">
+      <div class="panel-header">
+        <h2>Your Skills</h2>
+        <button class="action-link">Add more</button>
+      </div>
+      <div class="skills-container">
+        <span *ngFor="let skill of user.skills" class="skill-tag">{{ skill }}</span>
+      </div>
+      <div class="skill-match">
+        <div class="match-info">
+          <span class="match-percentage">87%</span>
+          <span class="match-label">Match rate with top jobs</span>
+        </div>
+        <div class="match-bar">
+          <div class="match-progress" style="width: 87%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-panel chart-section">
+      <div class="panel-header">
+        <h2>Application Progress</h2>
+        <div class="time-filter">
+          <button class="filter-option active">Week</button>
+          <button class="filter-option">Month</button>
+          <button class="filter-option">Year</button>
+        </div>
+      </div>
+      <div class="chart-container">
+        <canvas baseChart [data]="appChartData" [type]="appChartType" [options]="chartOptions"></canvas>
+      </div>
+    </section>
+  </div>
+  
+  <section class="recommended-jobs">
+    <div class="section-header">
+      <h2>Recommended for You</h2>
+      <button class="view-all-link">View all</button>
+    </div>
+    <div class="jobs-container">
+      <div class="job-card">
+        <div class="job-header">
+          <div class="company-logo">FB</div>
+          <div class="job-info">
+            <h3>Full Stack Developer</h3>
+            <p class="company-name">Facebook</p>
+          </div>
+        </div>
+        <div class="job-match">
+          <span class="match-label">Match</span>
+          <span class="match-score">95%</span>
+        </div>
+        <button class="apply-button">Apply Now</button>
+      </div>
+      
+      <div class="job-card">
+        <div class="job-header">
+          <div class="company-logo">GG</div>
+          <div class="job-info">
+            <h3>Frontend Engineer</h3>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-match">
+          <span class="match-label">Match</span>
+          <span class="match-score">92%</span>
+        </div>
+        <button class="apply-button">Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="action-footer">
+    <button class="primary-button" routerLink="/jobs">
+      <span class="button-text">Explore More Jobs</span>
+      <span class="button-icon arrow-icon"></span>
+    </button>
+  </div>
+</div>
